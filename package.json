@@ -1,0 +1,33 @@
+{
+  "name": "pagemonitor",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist",
+  "scripts": {
+    "start": "node dist",
+    "dev": "nodemon -w src --exec \"babel-node src --presets env\" & parcel watch pages/index.html --out-dir dist/pages",
+    "build": "babel src -s -D -d dist --presets env",
+    "test": "ava test",
+    "parcel-watch": "parcel watch pages/index.html --out-dir dist/page"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "express": "~4.15.5",
+    "jade": "~1.11.0",
+    "leven": "^2.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.12.7",
+    "parcel-bundler": "^1.2.1"
+  }
+}
